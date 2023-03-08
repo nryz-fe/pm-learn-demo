@@ -41,7 +41,9 @@ const UrlLink = () => {
           </Button>
           <Button
             onClick={handleLink}
-            style={!search && !hash ? { color: "purple" } : {}}
+            style={
+              !search && !hash && pathname !== "/" ? { color: "purple" } : {}
+            }
             type="link"
           >
             无参数跳转

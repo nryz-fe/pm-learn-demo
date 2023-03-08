@@ -4,6 +4,7 @@ import UrlLink from "./UrlLink";
 import Show from "./Show";
 import Pending from "./Pending";
 import Error from "./Error";
+import Crash from "./Crash";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -19,7 +20,8 @@ const items = [
   getItem("页面展示有误", "grp1"),
   getItem("页面提示错误信息", "grp2"),
   getItem("页面互动无反应", "grp3"),
-  getItem("跳转", "grp4"),
+  getItem("崩溃白屏", "grp4"),
+  getItem("跳转", "grp5"),
 ];
 
 const Dashboard = () => {
@@ -33,7 +35,9 @@ const Dashboard = () => {
         return <Error />;
       case "grp3":
         return <Pending />;
-      case "grp4":
+        case "grp4":
+          return <Crash />;
+      case "grp5":
         return <UrlLink />;
       default:
         return null;
