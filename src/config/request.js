@@ -5,7 +5,6 @@ export const request = (method, url, data) =>
     if (method === "Get") {
       let newUrl = `${url}?`;
       for (let i in data) {
-        console.log(data, i);
         newUrl += `${i}=${data[i]}`;
       }
       // const newUrl = value ? `${url}?value=${value}` : url;

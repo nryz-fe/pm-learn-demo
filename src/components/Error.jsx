@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { request } from "../config/request";
 
 const Error = () => {
-  const load = async (value) => {
+  const load = async (value, first) => {
     const {
       result,
       success,
@@ -14,10 +14,9 @@ const Error = () => {
       { value }
     );
     if (success && result) {
-      console.log(result);
       message.success(msg);
     } else {
-      message.error(msg);
+      message.error(first ? `这是一进入页面就报错的请求。${msg}` : msg);
     }
   };
 
@@ -37,7 +36,7 @@ const Error = () => {
   };
 
   useEffect(() => {
-    load("error");
+    load("error", true);
   }, []);
 
   return (

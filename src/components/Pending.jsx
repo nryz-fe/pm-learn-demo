@@ -41,12 +41,12 @@ const Pending = () => {
   };
 
   return (
-    <>
+    <div style={{ margin: "20px" }}>
       <Button type="primary" onClick={showModal}>
         Open Modal
       </Button>
       <Modal
-        title="Basic Modal"
+        title="一个 弹窗"
         open={isModalOpen}
         onOk={handlePending}
         onCancel={handleCancel}
@@ -67,14 +67,18 @@ const Pending = () => {
           </Button>,
         ]}
       >
-        <p>互动为什么无反应</p>
-        <p>提交：一直转圈 后端接口返回时间过长</p>
+        <p>互动为什么无反应？</p>
         <p>
-          出错：打开控制台，提示报错，报错提示信息里有关键字undefined，not
+          <span style={{ color: "#1677ff" }}>提交：</span>一直转圈
+          后端接口返回时间过长
+        </p>
+        <p>
+          <span style={{ color: "#ff4d4f" }}>出错：</span>
+          打开控制台，提示报错，报错提示信息里有关键字undefined，not
           function，找前端
         </p>
       </Modal>
-    </>
+    </div>
   );
 };
 
