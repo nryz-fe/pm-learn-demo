@@ -41,7 +41,7 @@ const Pending = () => {
   };
 
   return (
-    <div style={{ margin: "20px" }}>
+    <div style={{ margin: "20px", width: "100%" }}>
       <Button type="primary" onClick={showModal}>
         Open Modal
       </Button>

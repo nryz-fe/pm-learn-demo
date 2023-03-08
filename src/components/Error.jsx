@@ -40,7 +40,7 @@ const Error = () => {
   }, []);
 
   return (
-    <div style={{ margin: "20px" }}>
+    <div style={{ margin: "20px",width: '100%' }}>
       <p style={{ display: "block", fontSize: "20px" }}>Error</p>
       <div
         style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}

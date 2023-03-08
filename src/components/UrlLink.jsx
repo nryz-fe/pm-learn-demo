@@ -19,12 +19,13 @@ const UrlLink = () => {
   return (
     <div
       style={{
-        padding: "100px",
+        margin: "20px",
+        width: "100%",
       }}
     >
       <div>
-        <p style={{ margin: "20px", fontSize: "20px" }}>url</p>
-        <div>
+        <p style={{ marginBottom: "20px", fontSize: "24px" }}>url</p>
+        <div style={{ marginLeft: "-10px" }}>
           <Button
             onClick={handleParamsLink}
             style={search && !hash ? { color: "purple" } : {}}

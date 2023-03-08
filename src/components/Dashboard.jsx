@@ -59,7 +59,7 @@ const Dashboard = () => {
       <Menu
         selectedKeys={active}
         onClick={onClick}
-        style={{ width: 256 }}
+        style={{ width: 250 }}
         mode="inline"
         items={items}
       />
