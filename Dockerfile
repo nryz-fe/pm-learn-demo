@@ -17,7 +17,7 @@ RUN yarn build
 FROM ${PROXY}:${PROXY_VERSION} as runer
 LABEL maintainer="icctuan <601838356.com>"
 WORKDIR /
-COPY --from=builder /workspace/dist/ /usr/share/nginx/html/
+COPY --from=builder /workspace/build/ /usr/share/nginx/html/
 RUN rm /etc/nginx/conf.d/default.conf
 COPY --from=builder /workspace/nginx.conf /etc/nginx/conf.d/
 
