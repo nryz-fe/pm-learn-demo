@@ -4,17 +4,16 @@ import { useLocation, useNavigate } from "react-router-dom";
 const UrlLink = () => {
   const { search, hash, pathname, key, state } = useLocation();
   const navigate = useNavigate();
+  const location =  window.location
 
   const handleParamsLink = () => {
-    navigate(`/about/params?id=123&time=2023&name=%E6%B5%8B%20%E8%AF%95`);
+    location.href = `${location.origin}/about/params?id=123&time=2023&name=%E6%B5%8B%20%E8%AF%95`;
   };
   const handleHashLink = () => {
-    navigate(
-      `/about/params?id=123&time=2023&name=%E6%B5%8B%20%E8%AF%95#lalala`
-    );
+    location.href = `${location.origin}/about/params?id=123&time=2023&name=%E6%B5%8B%20%E8%AF%95#lalala`;
   };
   const handleLink = () => {
-    navigate(`/about/params`);
+    location.href = `${location.origin}/about/params`;
   };
   return (
     <div
