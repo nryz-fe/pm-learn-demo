@@ -62,7 +62,7 @@ const Error = () => {
       >
         前端请求失败：
         <Button onClick={load404} danger>
-          请求404
+          请求40x
         </Button>
       </div>
     </div>
